@@ -38,8 +38,8 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
 });
 
-app.get("/book", function (req, res) {
-    res.sendFile(path.join(__dirname, "book.html"));
+app.get("/view", function (req, res) {
+    res.sendFile(path.join(__dirname, "view.html"));
 });
 
 // Returns a json with all reservations
