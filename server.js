@@ -47,4 +47,11 @@ app.get("/api/characters", function (req, res) {
     return res.json(characters);
 });
 
-app.post("/api/makereservation", function(req, res)) {}
+app.post("/api/makereservation", function(req, res) {
+    var newReservation = req.body;
+    //newReservation.routeName =
+    // Validate if the max no of reservations are filled; add a reservation if slots remaining 
+    reservations.push(newReservation);
+    console.log(newReservation);
+    res.json(newReservation);
+});
