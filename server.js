@@ -55,3 +55,9 @@ app.post("/api/makereservation", function(req, res) {
     console.log(newReservation);
     res.json(newReservation);
 });
+
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
