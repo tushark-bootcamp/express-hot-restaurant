@@ -42,7 +42,7 @@ app.get("/book", function (req, res) {
     res.sendFile(path.join(__dirname, "book.html"));
 });
 
-// Displays all reservations
+// Returns a json with all reservations
 app.get("/api/table", function (req, res) {
     return res.json(reservations);
 });
