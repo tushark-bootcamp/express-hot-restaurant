@@ -42,12 +42,12 @@ app.get("/book", function (req, res) {
     res.sendFile(path.join(__dirname, "book.html"));
 });
 
-// Displays all characters
-app.get("/api/characters", function (req, res) {
-    return res.json(characters);
+// Displays all reservations
+app.get("/api/table", function (req, res) {
+    return res.json(reservations);
 });
 
-app.post("/api/makereservation", function(req, res) {
+app.post("/api/makereservation", function (req, res) {
     var newReservation = req.body;
     //newReservation.routeName =
     // Validate if the max no of reservations are filled; add a reservation if slots remaining 
@@ -58,6 +58,6 @@ app.post("/api/makereservation", function(req, res) {
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
-  });
+});
